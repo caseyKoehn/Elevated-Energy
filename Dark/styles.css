@@ -1,5 +1,5 @@
 :root {
-    --yellow: #ECB44B;
+    --yellow: #FFC000;
     --grey: #656258;
     --black: #000;
     --white: #FFF;
@@ -25,7 +25,9 @@ p {
 }
 
 .logo {
-    width: 200px;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 240px;
     height: auto;
 }
 
@@ -106,7 +108,7 @@ ul li {
 }
 
 .big-info-div {
-    margin-top: 60px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -134,9 +136,7 @@ hr {
 }
 
 .first-div {
-    padding-left: 50px;
-    padding-left: 50px;
-    padding-bottom: 170px;
+    padding-bottom: 130px;
     padding-top: 30px;
     background: var(--linear); /*#################################### */
 }
