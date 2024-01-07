@@ -1,9 +1,11 @@
 :root {
-    --yellow: #F9C900;
+    --yellow: #ECB44B;
     --grey: #656258;
-    --black: #000000;
-    --white: #FFFFFF;
-    --background: #E6E6E6;
+    --black: #000;
+    --white: #FFF;
+    --other: #D0D0D0;
+    --three-four: linear-gradient(to top left, #000, #434343);
+    --linear: linear-gradient(to bottom right, #000, #434343);
 }
 
 body, h1, h2, h3, ul, li {
@@ -22,10 +24,6 @@ p {
     font-size: 14px;
 }
 
-body {
-    background: var(--background); /*#################################### */
-}
-
 .logo {
     width: 200px;
     height: auto;
@@ -35,12 +33,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: var(--background); /*#################################### */
 }
 
 footer {
-    color: #fff;
-    background-color: #000;
+    color: var(--white); /*#################################### */
+    background-color: var(--black); /*#################################### */
     text-align: center;
     max-height: 60px;
     bottom: 0;
@@ -50,7 +47,7 @@ footer {
 
 ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--white); /*#################################### */
 }
 
 ul li {
@@ -85,11 +82,10 @@ ul li {
 
 .menu-container a {
     text-decoration: none;
-    color: #000000;
+    color: var(--white); /*#################################### */
     font-size: xx-large;
 }
 
-/* Animation effect on hover */
 .menu-container .menu-item::before {
     content: '';
     position: absolute;
@@ -97,14 +93,15 @@ ul li {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #fff;
-    transform: scaleX(0); /* Initial state, not visible */
+    background-color: var(--yellow); /*#################################### */
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
+    transform: scaleX(0);
 }
 
+.menu-container .menu-item.active::before,
 .menu-container .menu-item:hover::before {
-    transform: scaleX(1); /* Fully visible on hover */
+    transform: scaleX(1);
     transform-origin: bottom left;
 }
 
@@ -114,27 +111,26 @@ ul li {
 }
 
 hr {
-    color: #FFFFFF;
+    color: var(--white); /*#################################### */
     width: 15%;
 }
 
 .contact-button {
     margin-top: 15px;
-    background-color: transparent; /* Set the background to transparent */
-    color: #fff; /* Set the text color to black */
-    border: 2px solid #000; /* Set the border to black */
-    border-radius: 10px; /* Add rounded corners (adjust the value as needed) */
-    border-color: #fff;
-    padding: 10px 20px; /* Add padding for better visibility and click area */
-    font-size: 25px; /* Set the font size */
-    cursor: pointer; /* Change the cursor on hover to indicate interactivity */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Optional: add smooth transition effects */
+    background-color: transparent; /*#################################### */
+    color: var(--white); /*#################################### */
+    border: 2px solid var(--black); /*#################################### */
+    border-radius: 10px;
+    border-color: var(--white); /*#################################### */
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect - change background color and text color on hover */
 .contact-button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white); /*#################################### */
+    color: var(--black); /*#################################### */
 }
 
 .first-div {
@@ -142,25 +138,27 @@ hr {
     padding-left: 50px;
     padding-bottom: 170px;
     padding-top: 30px;
-    background-color: #3498db;
+    background: var(--linear); /*#################################### */
 }
 
 .description {
-    color: #FFFFFF;
+    color: var(--white); /*#################################### */
     font-size: 40px;
 }
 
 .res-com {
-    color: #000;
+    color: var(--yellow); /*#################################### */
     font-size: 35px;
 }
 
 .shocked {
-    color: #000;
+    color: var(--yellow); /*#################################### */
     font-size: 30px;
 }
 
 .second-div {
+    background: #1A1A1A;  /*#################################### */
+    color: var(--white);  /*#################################### */
     text-align: center;
     padding: 50px;
 }
@@ -190,10 +188,11 @@ hr {
 .our-work {
     height: auto;
     width: 50%;
+    filter: grayscale(100%);
+    filter: brightness(0.5);
 }
 
 .work {
-    background-color: #D0D0D0;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 25px;
@@ -201,7 +200,19 @@ hr {
     box-sizing: border-box;
 }
 
+.work h1 {
+    color: var(--yellow);  /*#################################### */
+}
+
+.work p {
+    color: var(--white); /*#################################### */
+}
+
 .work-para {
     font-size: 20px;
     text-align: justify;
+}
+
+.three-four {
+    background: var(--three-four);  /*#################################### */
 }
