@@ -121,24 +121,6 @@
         width: 15%
     }
 
-    .contact-button {
-        margin-top: 15px;
-        background-color: transparent;
-        color: var(--white);
-        border: 2px solid var(--black);
-        border-radius: 10px;
-        border-color: var(--white);
-        padding: 10px 20px;
-        font-size: 25px;
-        cursor: pointer;
-        transition: background-color .3s ease, color .3s ease
-    }
-
-    .contact-button:hover {
-        background-color: var(--white);
-        color: var(--black)
-    }
-
     .first-div {
         padding-bottom: 130px;
         padding-top: 30px;
@@ -167,6 +149,20 @@
 
     .mobile-div {
         display: none
+    }
+
+    .desktop {
+        justify-content: center;
+        padding-top: 15px;
+        display: flex;
+        align-items: center
+    }
+
+    .icon {
+        margin: 10px;
+        height: 60px;
+        width: auto;
+        vertical-align: middle
     }
 }
 
@@ -255,24 +251,6 @@
         width: 30%
     }
 
-    .contact-button {
-        margin-top: 15px;
-        background-color: transparent;
-        color: var(--white);
-        border: 2px solid var(--black);
-        border-radius: 10px;
-        border-color: var(--white);
-        padding: 10px 20px;
-        font-size: medium;
-        cursor: pointer;
-        transition: background-color .3s ease, color .3s ease
-    }
-
-    .contact-button:hover {
-        background-color: var(--white);
-        color: var(--black)
-    }
-
     .first-div {
         align-items: center;
         min-height: 100vh;
@@ -302,5 +280,17 @@
 
     .desktop {
         display: none
+    }
+
+    .mobile-div {
+        margin-left: 15px;
+        display: flex
+    }
+
+    .icon {
+        margin: 5px;
+        height: 40px;
+        width: auto;
+        vertical-align: middle
     }
 }
